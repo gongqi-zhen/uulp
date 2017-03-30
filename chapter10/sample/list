@@ -1,0 +1,10 @@
+Makefile
+listargs.c
+pipe.c
+pipedemo.c
+pipedemo2.c
+stdinredir1.c
+stdinredir2.c
+watch.sh
+watch2.sh
+whotofile.c

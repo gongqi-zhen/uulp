@@ -38,7 +38,7 @@ void child_code(int delay)
 void parent_code(int childpid)
 {
 	int wait_rv;		/* return value from wait() */
-	int value;
+//	int value;
 	wait_rv = wait(NULL);
 //	wait_rv = wait(&value);
 	printf("done waiting for %d. Wait returned: %d\n", childpid, wait_rv);

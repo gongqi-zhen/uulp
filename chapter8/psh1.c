@@ -33,7 +33,7 @@ int main()
 			if ( numargs > 0 ){		/* any args?	*/
 				arglist[numargs]=NULL;	/* close list	*/
 				execute( arglist );	/* do it	*/
-				printf("execvp never return, so doesn't exec following statement in case of success execvp \n");
+				printf("execvp never return \n");
 				numargs = 0;		/* and reset	*/
 			}
 		}

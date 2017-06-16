@@ -36,7 +36,7 @@ void do_more( FILE *fp )
 {
 	char	line[LINELEN];
 	int	num_of_lines = 0;
-	int	see_more(FILE *), reply;
+	int	reply;
 	FILE	*fp_tty;
 
 	fp_tty = fopen( "/dev/tty", "r" );	   /* NEW: cmd stream   */

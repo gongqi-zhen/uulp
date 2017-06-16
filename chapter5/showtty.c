@@ -90,6 +90,7 @@ void show_some_flags( struct termios *ttyp )
 void show_flagset( int thevalue, struct flaginfo thebitnames[] )
 /*
  * check each bit pattern and display descriptive title
+ * // struct flaginfo { int fl_value; char *fl_name; };
  */
 {
 	int	i;

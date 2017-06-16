@@ -39,13 +39,13 @@ int main(int ac, char *av[])
 void inthandler(int s)
 {
 	printf(" Received signal %d .. waiting\n", s );
-	sleep(2);
+	sleep(s);
 	printf("  Leaving inthandler \n");
 }
 
 void quithandler(int s)
 {
 	printf(" Received signal %d .. waiting\n", s );
-	sleep(3);
+	sleep(s);
 	printf("  Leaving quithandler \n");
 }

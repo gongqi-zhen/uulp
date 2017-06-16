@@ -15,11 +15,11 @@
 #include	"bounce.h"
 
 struct ppball the_ball ;
+	
+void	set_ticker( int  );
+int bounce_or_lose(struct ppball *);
 
 /**  the main loop  **/
-	
-int	set_ticker( time_t );
-int bounce_or_lose(struct ppball *);
 
 void set_up();
 void wrap_up();

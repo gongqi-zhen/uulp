@@ -1,0 +1,13 @@
+int make_server_socket ( int  );
+void setup(pthread_attr_t *attrp);
+void skip_rest_of_header(FILE *fp);
+void sanitize(char *str);
+void not_implemented(int fd);
+void do_404(char *item, int fd);
+int built_in(char *arg, int fd);
+int not_exist(char *f);
+int isadir(char *f);
+void do_ls(char *dir, int fd);
+void do_cat(char *f, int fd);
+int http_reply(int fd, FILE **fpp, int code, char *msg, char *type, char *content);
+void * handle_call(void *);

@@ -20,8 +20,8 @@ int main()
 		if ( i%2 == 1 ) 
 			standend();
 //		sleep(1);
-//		usleep(1000000);
-		usleep(100000);
+		usleep(1000000);
+//		usleep(100000);
 		refresh();
 	   }
 	endwin();

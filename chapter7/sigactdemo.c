@@ -19,6 +19,7 @@ int main()
 	/* load these two members first */
 	newhandler.sa_handler = inthandler;      /* handler function    */
 	newhandler.sa_flags = SA_RESETHAND | SA_RESTART;  /* options    */
+//	newhandler.sa_flags =  SA_RESTART;  /* options    */
 
 	/* then build the list of blocked signals */
 	sigemptyset(&blocked);                  /* clear all bits      */

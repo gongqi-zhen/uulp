@@ -1,0 +1,12 @@
+void process_rq( char *rq, int fd );
+int make_server_socket(int portnum);
+int read_til_crnl(FILE *fp);
+void cannot_do(int fd);
+int not_exist(char *f);
+void do_404(char *item, int fd);
+int isadir(char *f);
+void do_ls(char *dir, int fd);
+int ends_in_cgi(char *f);
+void do_exec( char *prog, int fd );
+void do_cat(char *f, int fd);
+void header( FILE *fp, char *content_type );

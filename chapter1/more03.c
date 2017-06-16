@@ -18,7 +18,7 @@ int main(int ac, char *av[])
 
 	tty_mode (0);
   set_term_noecho();
-//  set_nodelay_mode();
+  set_nodelay_mode();
 	if ( ac == 1 )
 		do_more (stdin);
 	else
@@ -62,7 +62,7 @@ void do_more ( FILE *fp )
 int see_more ( FILE *cmd )
 {
 	int c;
-
+	
 	printf("see more?");
 	while ( ( c = fgetc (cmd)) != EOF ) {
 		if ( c == 'q' )
@@ -72,6 +72,7 @@ int see_more ( FILE *cmd )
 		if ( c == '\n' )
 			return 1;
 	}
+
 	return 1;
 
 }
@@ -97,7 +98,7 @@ void set_term_noecho(void)
 	attribute.c_lflag &= ~ECHO;
 	attribute.c_lflag &= ~ICANON;
 	attribute.c_cc[VMIN] = 1;
-	tcsetattr ( 0, TCSANOW, &attribute );
+	tcsetattr ( 0 , TCSANOW, &attribute );
 
 }
 

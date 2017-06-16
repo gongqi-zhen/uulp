@@ -45,10 +45,12 @@ void parent_code(int childpid)
 	printf("done waiting for %d. Wait returned: %d\n", childpid, wait_rv);
 
 	// macro defined at sys/wait.h
-//	high_8 = child_status >> 8;     /* 1111 1111 0000 0000 */
-	high_8 = WEXITSTATUS(child_status);
+	high_8 = child_status >> 8;     /* 1111 1111 0000 0000 */
+//	high_8 = WEXITSTATUS(child_status);
 	low_7  = child_status & 0x7F;   /* 0000 0000 0111 1111 */
-//	bit_7  = child_status & 0x80;   /* 0000 0000 1000 0000 */
-	bit_7  = WCOREDUMP(child_status);
+//	low_7  = child_status & 127;   /* 0000 0000 0111 1111 */
+	bit_7  = child_status & 0x80;   /* 0000 0000 1000 0000 */
+//	bit_7  = child_status & 128;   /* 0000 0000 1000 0000 */
+//	bit_7  = WCOREDUMP(child_status);
 	printf("status: exit=%d, sig=%d, core=%d\n", high_8, low_7, bit_7);
 }

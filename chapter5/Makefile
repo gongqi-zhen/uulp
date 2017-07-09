@@ -4,10 +4,10 @@
 # Type  make    to compile all the programs
 # in the chapter 
 #
-all: echostate listchars setecho showtty write0
+all: echostate listchars setecho showtty write0 ioctl
 
 clean:
-	rm -f echostate listchars setecho showtty write0
+	rm -f echostate listchars setecho showtty write0 ioctl
 
 echostate: echostate.c 
 	cc -o echostate echostate.c 
@@ -23,4 +23,7 @@ showtty: showtty.c
 
 write0: write0.c 
 	cc -o write0 write0.c 
+
+ioctl: ioctl.c 
+	cc -o ioctl ioctl.c
 

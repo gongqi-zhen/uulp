@@ -82,6 +82,7 @@ void show_some_flags( struct termios *ttyp )
  */
 {
 	show_flagset( ttyp->c_iflag, input_flags );
+	putchar('\n');
 	show_flagset( ttyp->c_lflag, local_flags );
 }
 

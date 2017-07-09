@@ -38,7 +38,9 @@ void do_ls( char dirname[] )
 	struct dirent	*direntp;		/* each entry	 */
 
 	if ( ( dir_ptr = opendir( dirname ) ) == NULL )
-		fprintf(stderr,"ls1: cannot open %s\n", dirname);
+		//	S_ISREG(dirname); // 正確にはファイルであることを確認すべし
+			dostat ( dirname );
+//		fprintf(stderr,"ls2: cannot open %s\n", dirname);
 	else
 	{
 		while ( ( direntp = readdir( dir_ptr ) ) != NULL )

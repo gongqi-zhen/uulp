@@ -15,6 +15,9 @@
 #define	X_TTM		5
 #define	Y_TTM		8
 
+#define  UP_C          0x42    /* ↑ */
+#define  DOWN_C        0x41    /* ↓ */
+
 /** the ping pong ball **/
 
 struct ppball {

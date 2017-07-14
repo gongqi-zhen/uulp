@@ -4,12 +4,12 @@
 # Type  make    to compile all the programs
 # in the chapter 
 #
-all: bounce1d bounce2d bounce_aio bounce_async hello1 	\
+all: bounce1d bounce2d bounce3d bounce_aio bounce_async hello1 	\
 	hello2 hello3 hello4 hello5 sigactdemo sigdemo3 \
 	sleep1 ticker_demo
 
 clean:
-	rm -f bounce1d bounce2d bounce_aio bounce_async hello1 	\
+	rm -f bounce1d bounce2d bounce3d bounce_aio bounce_async hello1 	\
 		hello2 hello3 hello4 hello5 sigactdemo sigdemo3 \
 		sleep1 ticker_demo
 
@@ -19,6 +19,9 @@ bounce1d: bounce1d.c set_ticker.c
 
 bounce2d: bounce2d.c set_ticker.c
 	cc -o bounce2d bounce2d.c set_ticker.c -lcurses
+
+bounce3d: bounce3d.c set_ticker.c
+	cc -o bounce3d bounce3d.c set_ticker.c -lcurses
 
 bounce_aio: bounce_aio.c set_ticker.c
 	cc -o bounce_aio bounce_aio.c set_ticker.c -lrt  -lcurses

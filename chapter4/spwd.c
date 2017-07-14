@@ -22,7 +22,14 @@ void    inum_to_name(ino_t , char *, int );
 
 int main()
 {
-	printpathto( get_inode( "." ) );	/* print path to here	*/
+	ino_t my_inode;
+	my_inode = get_inode (".");
+	if ( my_inode == 2 ) {
+		printf("/\n");
+		return 0;
+	}
+
+	printpathto( my_inode );	/* print path to here	*/
 	putchar('\n');				/* then add newline	*/
 	return 0;
 }
